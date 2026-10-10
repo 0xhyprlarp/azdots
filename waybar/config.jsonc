@@ -1,0 +1,83 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 24,
+    "modules-left": ["hyprland/workspaces", "hyprland/submap"],
+    "modules-center": ["custom/arch"],
+    "modules-right": ["pulseaudio", "network", "cpu", "memory", "battery", "tray", "clock"],
+    
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": false,
+        "format": "{id}"
+    },
+    
+    "hyprland/submap": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+
+    "custom/arch": {
+        "format": "",
+        "tooltip-format": "Linux for life"
+    },
+    
+    "tray": {
+        "spacing": 10
+    },
+    
+    "clock": {
+        "format": "{:%H:%M}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "month",
+            "format": {
+                "months": "<span color='#ff0000'><b>{}</b></span>",
+                "days": "<span color='#ff0000'><b>{}</b></span>",
+                "weeks": "<span color='#ff0000'><b>W{}</b></span>",
+                "weekdays": "<span color='#ff0000'><b>{}</b></span>",
+                "today": "<span color='#000000' background='#ff0000'><b>{}</b></span>"
+            }
+        }
+    },
+    
+    "cpu": {
+        "format": "{usage}% "
+    },
+    
+    "memory": {
+        "format": "{}% "
+    },
+    
+    "battery": {
+        "bat": "BAT1",
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    
+    "network": {
+        "format-wifi": "{essid} ",
+        "format-ethernet": "",
+        "format-disconnected": "Disconnected ⚠",
+        "tooltip-format": "IP: {ipaddr}"
+    },
+    
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-muted": "",
+        "format-icons": {
+            "headphones": "",
+            "handsfree": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "on-click": "pavucontrol"
+    }
+}

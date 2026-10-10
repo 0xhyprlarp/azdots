@@ -1,0 +1,38 @@
+/* Apply font and colors globally without forcing nested labels incorrectly */
+window#waybar {
+    background-color: #000000;
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-weight: bold;
+}
+
+label, button {
+    color: #ff0000;
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-weight: bold;
+    border: none;
+    border-radius: 0;
+}
+
+/* Workspace Button Styling */
+#workspaces button {
+    padding: 0 10px;
+    background-color: transparent;
+}
+
+/* Fix: Explicitly target the label inside the active button so the text turns black */
+#workspaces button.active,
+#workspaces button.active label {
+    background-color: #ff0000;
+    color: #000000;
+}
+
+#workspaces button:hover,
+#workspaces button:hover label {
+    background-color: #aa0000;
+    color: #000000;
+}
+
+/* General spacing for center and right-side modules */
+#custom-arch, #pulseaudio, #network, #cpu, #memory, #battery, #clock, #tray {
+    padding: 0 10px;
+}

@@ -1,0 +1,7 @@
+require("hyprconfs/monitors")
+require("hyprconfs/startup")
+require("hyprconfs/env")
+require("hyprconfs/input")
+require("hyprconfs/lookconf")
+require("hyprconfs/keybinds")
+require("hyprconfs/workspaces")
